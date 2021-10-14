@@ -1,55 +1,142 @@
+.position{
+    position: absolute;
+    left:0;
+    top:0;
 
+
+
+
+}
 
 
   /** Masking. */
-#mask-svg {
+  #mask-svg {
+      position: fixed;
+
     -webkit-mask-image: url(../content/Shape1.svg);
-    -webkit-mask-position: 50% 50%;
-    -webkit-mask-size: 30% 30%;
+
+ 
+    margin-left: 0;
+    -webkit-mask-position: 60% 20%;
+    -webkit-mask-size: 20% ;
     -webkit-mask-repeat: no-repeat;
 
     mask-image: url(../content/Shape1.svg);
-    mask-position: 50%;
-    mask-size: 30% 30%;
+
+    mask-position: 60% 62%;
+    mask-size: 20% ;
     mask-repeat: no-repeat;
-  }
+  /* animation: mask-play 0.7s steps(200) forwards; */
 
-  #mask-svg:hover{
-
-    opacity: 0.2;
-  }
-
-
+   /*  animation: grow 2s steps(200) forwards; */
   
-/*
-  .mask-svg.shrinkgrow {
-    animation: mask_svg_shrinkgrow_keys 3s linear 0s infinite normal forwards;
-    -moz-animation: mask_svg_shrinkgrow_keys 3s linear 0s infinite normal forwards;
-    -webkit-animation: mask_svg_shrinkgrow_keys 3s linear 0s infinite normal forwards;
+  }
+
+
+
+
+
+#clipped {
+    position: relative;
+    clip-path: polygon(37% 2%, 23% 5%, 13% 17%, 8% 29%, 9% 39%, 15% 45%, 19% 52%, 16% 59%, 8% 64%, 6% 72%, 7% 79%, 13% 86%, 20% 88%, 26% 86%, 33% 89%, 41% 93%, 50% 97%, 61% 98%, 68% 96%, 76% 92%, 83% 88%, 90% 83%, 92% 77%, 91% 72%, 90% 68%, 90% 62%, 92% 56%, 93% 49%, 92% 43%, 93% 33%, 96% 27%, 97% 21%, 96% 14%, 91% 10%, 83% 7%, 74% 5%, 65% 7%, 58% 6%, 51% 4%, 45% 3%);
+}
+
+
+@-webkit-keyframes mask-play {
+    from {
+
+      -webkit-mask-size: 20%;
+      mask-size: 20%;
+    }
+    to {
+
+      -webkit-mask-mask-size: 200% 200%;
+      mask-size: 200% 200%;
+    }
+  }
+  
+  @keyframes mask-play {
+    from {
+        -webkit-mask-size: 20%;
+        mask-size: 20%;
+    }
+    to {
+        -webkit-mask-size: 320%;
+        mask-size: 320%;
+  }
+}
+
+
+
+
+
+@-webkit-keyframes grow {
+    0% {
+   -webkit-transform: scale( 0.3 );transform: scale( 0.3 );
+     }
+     
+ 
+     
+     100% {
+     -webkit-transform: scale( 2 );transform: scale( 2);
+     }
+   }
+
+   @keyframes grow {
+    0% {
+   transform: scale( 0.3 );
+     }
+     
+
+     
+     100% {
+transform: scale( 2 );
+     }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .shrinkgrow {
+    animation: mask_svg_shrinkgrow_keys 5s linear 0s infinite normal forwards;
   }
   
   @keyframes mask_svg_shrinkgrow_keys {
     0% {
       -webkit-mask-position: 30px 0px;
-      -webkit-mask-size: 300px 300px;
+      -webkit-mask-size: 30% 30%;
       mask-position: 30px 0px;
-      mask-size: 300px 300px;
+      mask-size: 30% 30%;
       animation-timing-function: ease-in-out;
     }
-    50% {
-      -webkit-mask-position: 40px 10px;
-      -webkit-mask-size: 280px 280px;
-      mask-position: 40px 10px;
-      mask-size: 280px 280px;
-      animation-timing-function: ease-in-out;
-    }
+
     100% {
       -webkit-mask-position: 30px 0px;
-      -webkit-mask-size: 300px 300px;
+      -webkit-mask-size: 100% 100%;
       mask-position: 30px 0px;
-      mask-size: 300px 300px;
+      mask-size: 100% 100%;
       animation-timing-function: ease-in-out;
     }
   } 
   
-  */
+ 
