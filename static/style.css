@@ -1,44 +1,51 @@
-.position{
+
+.porque{
     position: absolute;
-    left:0;
-    top:0;
-
-
-
-
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
 }
-
 
   /** Masking. */
   #mask-svg {
-      position: fixed;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
 
     -webkit-mask-image: url(../content/Shape1.svg);
-
- 
-    margin-left: 0;
-    -webkit-mask-position: 60% 20%;
-    -webkit-mask-size: 20% ;
+    -webkit-mask-position: 600px 200px;
+    -webkit-mask-size: 300px;
     -webkit-mask-repeat: no-repeat;
 
     mask-image: url(../content/Shape1.svg);
-
-    mask-position: 60% 62%;
-    mask-size: 20% ;
+    mask-position: 600px 200px;
+    mask-size: 300px;
     mask-repeat: no-repeat;
-  /* animation: mask-play 0.7s steps(200) forwards; */
 
+  /* animation: mask-play 0.7s steps(200) forwards; */
    /*  animation: grow 2s steps(200) forwards; */
-  
   }
 
+#hover-mask-svg{
+    position: absolute;
+    left: 600px;
+    top: 200px;
 
+    width: 300px;
+}
 
-
-
-#clipped {
-    position: relative;
-    clip-path: polygon(37% 2%, 23% 5%, 13% 17%, 8% 29%, 9% 39%, 15% 45%, 19% 52%, 16% 59%, 8% 64%, 6% 72%, 7% 79%, 13% 86%, 20% 88%, 26% 86%, 33% 89%, 41% 93%, 50% 97%, 61% 98%, 68% 96%, 76% 92%, 83% 88%, 90% 83%, 92% 77%, 91% 72%, 90% 68%, 90% 62%, 92% 56%, 93% 49%, 92% 43%, 93% 33%, 96% 27%, 97% 21%, 96% 14%, 91% 10%, 83% 7%, 74% 5%, 65% 7%, 58% 6%, 51% 4%, 45% 3%);
+#hover-mask-svg:hover{
+    opacity: 0.2;
+    filter: brightness(900%);
 }
 
 
