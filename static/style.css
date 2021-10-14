@@ -1,76 +1,102 @@
 
-.porque{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  
-    width: 100%;
-    height: 100%;
+.hover1{
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
 }
 
-  /** Masking. */
-  #mask-svg {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+/** Masking. */
+#mask-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-      width: 100%;
-      height: 100%;
+  width: 100%;
+  height: 100%;
 
-    -webkit-mask-image: url(../content/Shape1.svg);
-    -webkit-mask-position: 600px 200px;
-    -webkit-mask-size: 300px;
-    -webkit-mask-repeat: no-repeat;
+-webkit-mask-image: url(../content/Shape1.svg);
+-webkit-mask-position: 60vw 20vh;
+-webkit-mask-size: 40vmin;
+-webkit-mask-repeat: no-repeat;
 
-    mask-image: url(../content/Shape1.svg);
-    mask-position: 600px 200px;
-    mask-size: 300px;
-    mask-repeat: no-repeat;
+mask-image: url(../content/Shape1.svg);
+mask-position: 60vw 20vh;
+mask-size: 40vmin;
+mask-repeat: no-repeat;
 
-  /* animation: mask-play 0.7s steps(200) forwards; */
-   /*  animation: grow 2s steps(200) forwards; */
-  }
-
-#hover-mask-svg{
-    position: absolute;
-    left: 600px;
-    top: 200px;
-
-    width: 300px;
+/* animation: mask-play 0.7s steps(200) forwards; */
+/*  animation: grow 2s steps(200) forwards; */
 }
 
-#hover-mask-svg:hover{
-    opacity: 0.2;
-    filter: brightness(900%);
+#hover1-mask-svg{
+  width: 100%;
+  height: 100%;
+
+
+opacity: 0;
+
+
+
 }
 
+#hover1-mask-svg:hover{
+opacity: 0.3;
+filter: brightness(900%);
+}
+
+p{
+position:absolute;
+left: (60vw+50px);
+top: (20vh+50px);
+font-size: 3vmin;
+}
+
+.container{
+
+position: absolute;
+left: 60vw;
+top: 20vh;
+
+width: 40vmin;
+
+}
+
+.inner-container{
+
+  position: relative;
+width: 100%;
+height: 100%;
+}
 
 @-webkit-keyframes mask-play {
-    from {
+from {
 
-      -webkit-mask-size: 20%;
-      mask-size: 20%;
-    }
-    to {
+  -webkit-mask-size: 20%;
+  mask-size: 20%;
+}
+to {
 
-      -webkit-mask-mask-size: 200% 200%;
-      mask-size: 200% 200%;
-    }
-  }
-  
-  @keyframes mask-play {
-    from {
-        -webkit-mask-size: 20%;
-        mask-size: 20%;
-    }
-    to {
-        -webkit-mask-size: 320%;
-        mask-size: 320%;
-  }
+  -webkit-mask-mask-size: 200% 200%;
+  mask-size: 200% 200%;
+}
+}
+
+@keyframes mask-play {
+from {
+    -webkit-mask-size: 20%;
+    mask-size: 20%;
+}
+to {
+    -webkit-mask-size: 320%;
+    mask-size: 320%;
+}
 }
 
 
@@ -78,72 +104,71 @@
 
 
 @-webkit-keyframes grow {
-    0% {
-   -webkit-transform: scale( 0.3 );transform: scale( 0.3 );
-     }
-     
- 
-     
-     100% {
-     -webkit-transform: scale( 2 );transform: scale( 2);
-     }
-   }
-
-   @keyframes grow {
-    0% {
-   transform: scale( 0.3 );
-     }
-     
-
-     
-     100% {
-transform: scale( 2 );
-     }
-   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .shrinkgrow {
-    animation: mask_svg_shrinkgrow_keys 5s linear 0s infinite normal forwards;
+0% {
+-webkit-transform: scale( 0.3 );transform: scale( 0.3 );
   }
   
-  @keyframes mask_svg_shrinkgrow_keys {
-    0% {
-      -webkit-mask-position: 30px 0px;
-      -webkit-mask-size: 30% 30%;
-      mask-position: 30px 0px;
-      mask-size: 30% 30%;
-      animation-timing-function: ease-in-out;
-    }
 
-    100% {
-      -webkit-mask-position: 30px 0px;
-      -webkit-mask-size: 100% 100%;
-      mask-position: 30px 0px;
-      mask-size: 100% 100%;
-      animation-timing-function: ease-in-out;
-    }
-  } 
   
- 
+  100% {
+  -webkit-transform: scale( 2 );transform: scale( 2);
+  }
+}
+
+@keyframes grow {
+0% {
+transform: scale( 0.3 );
+  }
+  
+
+  
+  100% {
+transform: scale( 2 );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shrinkgrow {
+animation: mask_svg_shrinkgrow_keys 5s linear 0s infinite normal forwards;
+}
+
+@keyframes mask_svg_shrinkgrow_keys {
+0% {
+  -webkit-mask-position: 30px 0px;
+  -webkit-mask-size: 30% 30%;
+  mask-position: 30px 0px;
+  mask-size: 30% 30%;
+  animation-timing-function: ease-in-out;
+}
+
+100% {
+  -webkit-mask-position: 30px 0px;
+  -webkit-mask-size: 100% 100%;
+  mask-position: 30px 0px;
+  mask-size: 100% 100%;
+  animation-timing-function: ease-in-out;
+}
+} 
+
