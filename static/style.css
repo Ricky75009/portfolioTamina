@@ -59,11 +59,9 @@ mask-repeat: no-repeat;
 } 
 
 .animation1{
-animation: mask-play 0.7s steps(200); 
+animation: mask-play 0.5s steps(6000); 
 animation-fill-mode: forwards;
 -webkit-animation-fill-mode: forwards;
-
-
 }
 
 #hover-mask-svg1{
@@ -120,12 +118,15 @@ from {
 
 -webkit-mask-size: 40vmin;
 mask-size: 40vmin;
+-webkit-mask-position: 60vw 20vh;
+mask-position: 60vw 20vh;
 }
 to {
+  -webkit-mask-position: -70vw -70vh;
+  mask-position: -70vw -70vh;
 
-
--webkit-mask-size: 100vmin;
-mask-size: 100vmin;
+-webkit-mask-size: 600vmin;
+mask-size: 600vmin;
 
 
 }
@@ -134,11 +135,15 @@ mask-size: 100vmin;
 0% {
 -webkit-mask-size: 40vmin;
 mask-size: 40vmin;
+-webkit-mask-position: 60vw 20vh;
+mask-position: 60vw 20vh;
 }
 100% {
 
-ask-size: 100 vmin;
--webkit-mask-size: 100vmin;
+mask-size: 600 vmin;
+-webkit-mask-size:600vmin;
+-webkit-mask-position: -70vw -70vh;
+mask-position: -70vw -70vh;
 
 }
 }
