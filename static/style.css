@@ -7,16 +7,17 @@ h1{
 color: beige;
 font-family: menlo;
 font-size: 2vmin;
-
-
 text-align: right;
 position: sticky;
 }
+
+
 
 #trans{
 height: auto;
 height: 200%;
 width: auto;
+
 
 }
 
@@ -26,7 +27,7 @@ width: 100%;
 height: auto;
 top: 0;
 left: 0;
-
+overflow: hidden;
 
 }
 
@@ -37,8 +38,11 @@ right: 0;
 bottom: 0;
 left: 0;
 
+cursor: url('../content/cursors/shop.svg'),default;
+
+
 width: 100%;
-height: 100%;
+height: 300%;
 }
 
 /** Masking. */
@@ -46,6 +50,8 @@ height: 100%;
 position: absolute;
 top: 0;
 left: 0;
+
+
 
 -webkit-mask-image: url(../content/shapes/shape1.svg);
 -webkit-mask-position: 60vw 20vh;
@@ -98,7 +104,7 @@ font-size: 3vmin;
 }
 
 .container1{
-
+  cursor: url('../content/cursors/open.svg'),default;
 position: absolute;
 left: 60vw;
 top: 20vh;
