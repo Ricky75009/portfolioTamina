@@ -4,7 +4,7 @@ src: url(../content/fonts/Menlo-Regular.woff);
 }
 
 h1{
-
+color: beige;
 font-family: menlo;
 font-size: 2vmin;
 
@@ -14,16 +14,19 @@ position: sticky;
 }
 
 #trans{
-  opacity: 0.2;
+height: auto;
+height: 200%;
+width: auto;
+
 }
 
 .background{
 position: absolute;
-
 width: 100%;
 height: auto;
 top: 0;
 left: 0;
+
 
 }
 
@@ -63,6 +66,12 @@ animation: mask-play 0.5s steps(6000);
 animation-fill-mode: forwards;
 -webkit-animation-fill-mode: forwards;
 }
+
+.animation1-reverse{
+  animation: mask-play-reverse 0.5s steps(6000); 
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  }
 
 #hover-mask-svg1{
 width: 100%;
@@ -142,12 +151,46 @@ mask-position: 60vw 20vh;
 
 mask-size: 600 vmin;
 -webkit-mask-size:600vmin;
--webkit-mask-position: -70vw -70vh;
-mask-position: -70vw -70vh;
+-webkit-mask-position: -95vw -95vh;
+mask-position: -95vw -95vh;
 
 }
 }
 
+
+@keyframes mask-play-reverse {
+  0% {
+  -webkit-mask-size: 600vmin;
+  mask-size: 600vmin;
+  -webkit-mask-position: -95vw -95vh;
+  mask-position: -95vw -95vh;
+  }
+  100% {
+  
+  mask-size: 40 vmin;
+  -webkit-mask-size:40vmin;
+  -webkit-mask-position: 60vw 20vh;
+  mask-position: 60vw 20vh;
+  
+  }
+  }
+
+  @-webkit-keyframes mask-play-reverse {
+    0% {
+    -webkit-mask-size: 600vmin;
+    mask-size: 600vmin;
+    -webkit-mask-position: -95vw -95vh;
+    mask-position: -95vw -95vh;
+    }
+    100% {
+    
+    mask-size: 40 vmin;
+    -webkit-mask-size:40vmin;
+    -webkit-mask-position: 60vw 20vh;
+    mask-position: 60vw 20vh;
+    
+    }
+    }
 
 
 
