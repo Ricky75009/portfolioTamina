@@ -137,11 +137,11 @@ mask-size: 40vmin;
 mask-position: 60vw 20vh;
 }
 to {
-  -webkit-mask-position: -70vw -70vh;
-  mask-position: -70vw -70vh;
+  -webkit-mask-position: -250vmin -250vmin;
+  mask-position: -250vmin -250vmin;
 
--webkit-mask-size: 600vmin;
-mask-size: 600vmin;
+-webkit-mask-size: 900vmin;
+mask-size: 900vmin;
 
 
 }
@@ -155,10 +155,10 @@ mask-position: 60vw 20vh;
 }
 100% {
 
-mask-size: 600 vmin;
--webkit-mask-size:600vmin;
--webkit-mask-position: -95vw -95vh;
-mask-position: -95vw -95vh;
+mask-size: 900 vmin;
+-webkit-mask-size:900vmin;
+-webkit-mask-position: -250vmin -250vmin;
+mask-position: -250vmin -250vmin;
 
 }
 }
@@ -166,10 +166,10 @@ mask-position: -95vw -95vh;
 
 @keyframes mask-play-reverse {
   0% {
-  -webkit-mask-size: 600vmin;
-  mask-size: 600vmin;
-  -webkit-mask-position: -95vw -95vh;
-  mask-position: -95vw -95vh;
+  -webkit-mask-size: 900vmin;
+  mask-size: 900vmin;
+  -webkit-mask-position: -250vmin -250vmin;
+  mask-position: -250vmin -250vmin;
   }
   100% {
   
@@ -183,10 +183,10 @@ mask-position: -95vw -95vh;
 
   @-webkit-keyframes mask-play-reverse {
     0% {
-    -webkit-mask-size: 600vmin;
-    mask-size: 600vmin;
-    -webkit-mask-position: -95vw -95vh;
-    mask-position: -95vw -95vh;
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
     }
     100% {
     
