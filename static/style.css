@@ -3,6 +3,10 @@ font-family: menlo;
 src: url(../content/fonts/Menlo-Regular.woff);
 }
 
+:root{
+  --opacity : 100%;
+}
+
 h1{
 color: beige;
 font-family: menlo;
@@ -31,18 +35,39 @@ overflow: hidden;
 
 }
 
-.hover1{
+
+#hover1{
 position: absolute;
 top: 0;
 right: 0;
 bottom: 0;
 left: 0;
 
+
 cursor: url('../content/cursors/shop.svg'),default;
+
+
 
 
 width: 100%;
 height: 300%;
+}
+#hover2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  cursor : url('../content/cursors/close.svg'),n-resize;
+
+  
+  
+  
+  
+  width: 100%;
+  height: 300%;
+
 }
 
 /** Masking. */
@@ -103,12 +128,14 @@ bottom: 2vmin;
 font-size: 3vmin;
 }
 
-.container1{
+#container1{
   cursor: url('../content/cursors/open.svg'),default;
+
 position: absolute;
 left: 60vw;
 top: 20vh;
 
+opacity: var(--opacity);
 width: 40vmin;
 
 }
@@ -116,7 +143,7 @@ width: 40vmin;
 
 
 
-.inner-container1{
+#inner-container1{
 
 position: relative;
 width: 100%;
@@ -124,7 +151,7 @@ height: 100%;
 opacity: 0;
 }
 
-.inner-container1:hover{
+#inner-container1:hover{
 opacity: 100%;
 }
 
