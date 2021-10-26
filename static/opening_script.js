@@ -15,6 +15,12 @@ hovermasksvg1.onclick = function () {
       container1.classList.replace("open", "close");
     }, 700);
   } else if (masksvg1.classList.contains("animation1")) {
+    masksvg1.classList.replace("animation1", "animation1-reverse");
+    setTimeout(function () {
+      container1.classList.replace("close", "open");
+      hover1.classList.replace("close", "shop");
+      container1.style.setProperty("--opacity", "1");
+    }, 700);
   } else {
     masksvg1.classList.add("animation1");
     container1.style.setProperty("--opacity", "0");
@@ -34,8 +40,11 @@ hover1.onclick = function (event) {
   if (
     masksvg1.classList.contains("animation1") &&
     hover1.classList.contains("close")
+
   ) {
     masksvg1.classList.replace("animation1", "animation1-reverse");
+    container1.classList.replace("close", "open");
+    container1.style.setProperty("--opacity", "1");
     setTimeout(function () {
       hover1.classList.replace("close", "shop");
     }, 700);
