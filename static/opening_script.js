@@ -15,13 +15,21 @@ var height1= (Math.floor(Math.random() * 66) + 5) + 'vh';
 var height2= (Math.floor(Math.random() * 66) + 5) + 'vh';
 var height3= (Math.floor(Math.random() * 56) + 10) + 'vh';
 
+var width1= (Math.floor(Math.random() * 61) + 5) + 'vw';
+var width2= (Math.floor(Math.random() * 61) + 5) + 'vw';
+var width3= (Math.floor(Math.random() * 61) + 5) + 'vw';
+
 
 r.style.setProperty("--visibility", "visible");
 
 r.style.setProperty("--height1", height1);
-console.log('height1 = ',  height1);
 r.style.setProperty("--height2", height2);
 r.style.setProperty("--height3", height3);
+
+r.style.setProperty("--width1", width1);
+r.style.setProperty("--width2", width2);
+r.style.setProperty("--width3", width3);
+
 
 
 
@@ -41,10 +49,9 @@ hovermasksvg1.onclick = function () {
 
     console.log("add animation class and change shop to close");
 
-    setTimeout(function () {
-      hover.classList.replace("shop", "close");
-      container1.classList.replace("open", "close");
-    }, 700);
+    hover.classList.replace("shop", "close");
+    container1.classList.replace("open", "close");
+
   } else if (masksvg1.classList.contains("animation1")) {
     masksvg1.classList.replace("animation1", "animation1-reverse");
 
@@ -65,10 +72,10 @@ hovermasksvg1.onclick = function () {
     masksvg3.style.visibility = "hidden";
 
     console.log("add animation class and change shop to close");
-    setTimeout(function () {
+
       hover.classList.replace("shop", "close");
       container1.classList.replace("open", "close");
-    }, 700);
+
   }
 };
 
@@ -141,10 +148,10 @@ hovermasksvg2.onclick = function () {
     r.style.setProperty("--visibility", "hidden");
     masksvg1.style.visibility = "hidden";
     masksvg3.style.visibility = "hidden";
-    setTimeout(function () {
+
       hover.classList.replace("shop", "close");
       container2.classList.replace("open", "close");
-    }, 700);
+
   } else if (masksvg2.classList.contains("animation2")) {
     masksvg2.classList.replace("animation2", "animation2-reverse");
     setTimeout(function () {
@@ -161,10 +168,10 @@ hovermasksvg2.onclick = function () {
     masksvg1.style.visibility = "hidden";
     masksvg3.style.visibility = "hidden";
     console.log("add animation class and change shop to close");
-    setTimeout(function () {
+
       hover.classList.replace("shop", "close");
       container2.classList.replace("open", "close");
-    }, 700);
+
   }
 };
 
@@ -181,10 +188,10 @@ hovermasksvg3.onclick = function () {
     r.style.setProperty("--visibility", "hidden");
     masksvg1.style.visibility = "hidden";
     masksvg2.style.visibility = "hidden";
-    setTimeout(function () {
+
       hover.classList.replace("shop", "close");
       container3.classList.replace("open", "close");
-    }, 700);
+
   } else if (masksvg3.classList.contains("animation3")) {
     masksvg3.classList.replace("animation3", "animation3-reverse");
     setTimeout(function () {
@@ -201,10 +208,10 @@ hovermasksvg3.onclick = function () {
     masksvg1.style.visibility = "hidden";
     masksvg2.style.visibility = "hidden";
     console.log("add animation class and change shop to close");
-    setTimeout(function () {
+
       hover.classList.replace("shop", "close");
       container3.classList.replace("open", "close");
-    }, 700);
+
   }
 };
 
