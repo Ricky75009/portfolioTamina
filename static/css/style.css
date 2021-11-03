@@ -1,0 +1,375 @@
+@font-face {
+  font-family: menlo;
+  src: url(../../content/fonts/Menlo-Regular.woff); }
+:root {
+  --opacity: 100%;
+  --opacity4others: 100%;
+  --visibility: visible; 
+  --height1: 10vh;
+  --height2: 20vh;
+  --height3: 70vh;
+
+}
+
+h1 {
+  color: beige;
+  font-family: menlo;
+  font-size: 2vmin;
+  text-align: right;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  position: sticky; }
+
+p {
+  font-family: menlo;
+  position: absolute;
+  right: -1vmin;
+  bottom: 0vmin;
+  font-size: 2.5vmin;
+  visibility: inherit; }
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+
+.shop {
+  cursor: url("../../content/cursors/shop.svg"), default; }
+
+.close {
+  cursor: url("../../content/cursors/close.svg"), n-resize; }
+
+.open {
+  cursor: url("../../content/cursors/open.svg"), default; }
+
+#hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* cursor: url('../content/cursors/shop.svg'),default; */
+  width: 100%;
+  height: 100vh; }
+
+/** Masking. */
+#mask-svg1 {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: url(../../content/shapes/shape1.svg);
+  -webkit-mask-position: 15vw var(--height1);
+  -webkit-mask-size: 30vmin;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(../../content/shapes/shape1.svg);
+  mask-position: 15vw var(--height1);
+  mask-size: 30vmin;
+  mask-repeat: no-repeat; }
+
+#mask-svg2 {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: auto;
+  -webkit-mask-image: url(../../content/shapes/shape2.svg);
+  -webkit-mask-position: 45vw var(--height2);
+  -webkit-mask-size: 30vmin;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(../../content/shapes/shape2.svg);
+  mask-position: 45vw var(--height2);
+  mask-size: 30vmin;
+  mask-repeat: no-repeat; }
+
+#mask-svg3 {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: url(../../content/shapes/shape3.svg);
+  -webkit-mask-position: 75vw var(--height3);
+  -webkit-mask-size: 30vmin;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(../../content/shapes/shape3.svg);
+  mask-position: 75vw var(--height3);
+  mask-size: 30vmin;
+  mask-repeat: no-repeat; }
+
+#hover-mask-svg1 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: inherit; }
+
+#hover-mask-svg1:hover {
+  opacity: 0.3;
+  visibility: inherit; }
+
+#hover-mask-svg2 {
+  width: 100%;
+  height: 100%;
+  z-index: auto;
+  opacity: var(--opacity);
+  visibility: inherit; }
+
+#hover-mask-svg2:hover {
+  opacity: 0.3;
+  visibility: inherit; }
+
+#hover-mask-svg3 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: inherit; }
+
+#hover-mask-svg3:hover {
+  opacity: 0.3;
+  visibility: inherit; }
+
+#container1 {
+  position: absolute;
+  left: 15vw;
+  top: var(--height1);
+  opacity: var(--opacity);
+  width: 30vmin;
+  visibility: var(--visibility); }
+
+#container2 {
+  position: absolute;
+  left: 45vw;
+  top: var(--height2);
+  opacity: var(--opacity);
+  width: 30vmin;
+  visibility: var(--visibility); }
+
+#container3 {
+  position: absolute;
+  left: 75vw;
+  top: var(--height3);
+  opacity: var(--opacity);
+  width: 30vmin;
+  visibility: var(--visibility); }
+
+#inner-container1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: inherit; }
+
+#inner-container1:hover {
+  opacity: 100%;
+  visibility: inherit; }
+
+#inner-container2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: inherit; }
+
+#inner-container2:hover {
+  opacity: 100%;
+  visibility: inherit; }
+
+#inner-container3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: inherit; }
+
+#inner-container3:hover {
+  opacity: 100%;
+  visibility: inherit; }
+
+
+
+
+
+
+@-webkit-keyframes mask-play1 {
+  from {
+    -webkit-mask-size: 30vmin;
+    mask-size: 30vmin;
+    -webkit-mask-position: 15vw var(--height1);
+    mask-position: 15vw var(--height1);
+  }
+  to {
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+  }
+}
+@keyframes mask-play1 {
+  0% {
+    -webkit-mask-size: 30vmin;
+    mask-size: 30vmin;
+    -webkit-mask-position: 15vw var(--height1);
+    mask-position: 15vw var(--height1);
+  }
+  100% {
+    mask-size: 900 vmin;
+    -webkit-mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  }
+}
+  
+@keyframes mask-play1-reverse {
+  0% {
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  }
+  100% {
+    mask-size: 30 vmin;
+    -webkit-mask-size: 30vmin;
+    -webkit-mask-position: 15vw var(--height1);
+    mask-position: 15vw var(--height1);
+  }
+}
+  
+@-webkit-keyframes mask-play1-reverse {
+  0% {
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  }
+  100% {
+    mask-size: 30 vmin;
+    -webkit-mask-size: 30vmin;
+    -webkit-mask-position: 15vw var(--height1);
+    mask-position: 15vw var(--height1);
+  }
+}
+  
+  
+@-webkit-keyframes mask-play2 {
+  from {
+    -webkit-mask-size: 30vmin;
+    mask-size: 30vmin;
+    -webkit-mask-position: 45vw var(--height2);
+    mask-position: 45vw var(--height2);
+  }
+  to {
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+  }
+}
+@keyframes mask-play2 {
+  0% {
+    -webkit-mask-size: 30vmin;
+    mask-size: 30vmin;
+    -webkit-mask-position: 45vw var(--height2);
+    mask-position: 45vw var(--height2);
+  }
+  100% {
+    mask-size: 900 vmin;
+    -webkit-mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  }
+}
+  
+@keyframes mask-play2-reverse {
+  0% {
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  }
+  100% {
+    mask-size: 30 vmin;
+    -webkit-mask-size: 30vmin;
+    -webkit-mask-position: 45vw var(--height2);
+    mask-position: 45vw var(--height2);
+  }
+}
+  
+@-webkit-keyframes mask-play2-reverse {
+  0% {
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  }
+  100% {
+    mask-size: 30 vmin;
+    -webkit-mask-size: 30vmin;
+    -webkit-mask-position: 45vw var(--height2);
+    mask-position: 45vw var(--height2);
+  }
+}
+  
+@-webkit-keyframes mask-play3 {
+  from {
+    -webkit-mask-size: 30vmin;
+    mask-size: 30vmin;
+    -webkit-mask-position: 75vw var(--height3);
+    mask-position: 75vw var(--height3);
+  }
+  to {
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+  }
+}
+@keyframes mask-play3 {
+  0% {
+    -webkit-mask-size: 30vmin;
+    mask-size: 30vmin;
+    -webkit-mask-position: 75vw var(--height3);
+    mask-position: 75vw var(--height3);
+  }
+  100% {
+    mask-size: 900 vmin;
+    -webkit-mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  }
+}
+  
+@keyframes mask-play3-reverse {
+  0% {
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  }
+  100% {
+    mask-size: 30 vmin;
+    -webkit-mask-size: 30vmin;
+    -webkit-mask-position: 75vw var(--height3);
+    mask-position: 75vw var(--height3);
+  }
+}
+  
+@-webkit-keyframes mask-play3-reverse {
+  0% {
+    -webkit-mask-size: 900vmin;
+    mask-size: 900vmin;
+    -webkit-mask-position: -250vmin -250vmin;
+    mask-position: -250vmin -250vmin;
+  }
+  100% {
+    mask-size: 30 vmin;
+    -webkit-mask-size: 30vmin;
+    -webkit-mask-position: 75vw var(--height3);
+    mask-position: 75vw var(--height3);
+  }
+}
+  
