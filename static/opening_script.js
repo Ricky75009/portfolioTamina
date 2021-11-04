@@ -49,6 +49,9 @@ hovermasksvg1.onclick = function () {
 
     console.log("add animation class and change shop to close");
 
+ 
+ 
+
     hover.classList.replace("shop", "close");
     container1.classList.replace("open", "close");
 
@@ -59,11 +62,12 @@ hovermasksvg1.onclick = function () {
       container1.classList.replace("close", "open");
       hover.classList.replace("close", "shop");
 
+      
       r.style.setProperty("--visibility", "visible");
       masksvg2.style.visibility = "visible";
       masksvg3.style.visibility = "visible";
       masksvg1.style.visibility = "visible";
-    }, 700);
+    }, 500);
   } else {
     masksvg1.classList.add("animation1");
 
@@ -100,7 +104,7 @@ hover.onclick = function (event) {
 
       r.style.setProperty("--visibility", "visible");
       hover.classList.replace("close", "shop");
-    }, 700);
+    }, 500);
   } else if (hover.classList.contains("shop")) {
     alert("direction le shop");
     r.style.setProperty("--visibility", "hidden");
@@ -118,7 +122,7 @@ hover.onclick = function (event) {
       masksvg1.style.visibility = "visible";
       masksvg3.style.visibility = "visible";
       r.style.setProperty("--visibility", "visible");
-    }, 700);
+    }, 500);
   } else if (
     masksvg3.classList.contains("animation3") &&
     hover.classList.contains("close")
@@ -131,7 +135,7 @@ hover.onclick = function (event) {
       masksvg3.style.visibility = "visible";
       masksvg1.style.visibility = "visible";
       r.style.setProperty("--visibility", "visible");
-    }, 700);
+    }, 500);
   }
 };
 
@@ -160,7 +164,7 @@ hovermasksvg2.onclick = function () {
       r.style.setProperty("--visibility", "visible");
       masksvg1.style.visibility = "visible";
       masksvg1.style.visibility = "visible";
-    }, 700);
+    }, 500);
   } else {
     masksvg2.classList.add("animation2");
 
@@ -200,7 +204,7 @@ hovermasksvg3.onclick = function () {
       r.style.setProperty("--visibility", "visible");
       masksvg1.style.visibility = "visible";
       masksvg2.style.visibility = "visible";
-    }, 700);
+    }, 500);
   } else {
     masksvg3.classList.add("animation3");
 

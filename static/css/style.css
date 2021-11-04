@@ -32,6 +32,23 @@ p {
 
 }
 
+#main{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  background-image: url(../../content/background/photo1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+}
+
+
+
 .background {
   position: absolute;
   width: 100%;
@@ -40,11 +57,16 @@ p {
   left: 0;
   overflow: hidden; }
 
+
+
 .shop {
   cursor: url("../../content/cursors/shop.svg"), default; }
 
 .close {
   cursor: url("../../content/cursors/close.svg"), n-resize; }
+
+  .close_temp {
+    cursor: url("../../content/cursors/close_temp.svg"), n-resize; }
 
 .open {
   cursor: url("../../content/cursors/open.svg"), default; }
@@ -57,7 +79,7 @@ p {
   left: 0;
   /* cursor: url('../content/cursors/shop.svg'),default; */
   width: 100%;
-  height: 100vh; }
+  height: 100%; }
 
 /** Masking. */
 #mask-svg1 {
@@ -219,7 +241,7 @@ p {
     mask-position: 12vw var(--height1);
   }
   100% {
-    mask-size: 900 vmin;
+    mask-size: 900vmin;
     -webkit-mask-size: 900vmin;
     -webkit-mask-position: -250vmin -250vmin;
     mask-position: -250vmin -250vmin;
@@ -234,7 +256,7 @@ p {
     mask-position: -250vmin -250vmin;
   }
   100% {
-    mask-size: 30 vmin;
+    mask-size: 30vmin;
     -webkit-mask-size: 30vmin;
     -webkit-mask-position: 12vw var(--height1);
     mask-position: 12vw var(--height1);
@@ -249,7 +271,7 @@ p {
     mask-position: -250vmin -250vmin;
   }
   100% {
-    mask-size: 30 vmin;
+    mask-size: 30vmin;
     -webkit-mask-size: 30vmin;
     -webkit-mask-position: 12vw var(--height1);
     mask-position: 12vw var(--height1);
@@ -280,7 +302,7 @@ p {
     mask-position: 42vw var(--height2);
   }
   100% {
-    mask-size: 900 vmin;
+    mask-size: 900vmin;
     -webkit-mask-size: 900vmin;
     -webkit-mask-position: -250vmin -250vmin;
     mask-position: -250vmin -250vmin;
@@ -295,7 +317,7 @@ p {
     mask-position: -250vmin -250vmin;
   }
   100% {
-    mask-size: 30 vmin;
+    mask-size: 30vmin;
     -webkit-mask-size: 30vmin;
     -webkit-mask-position: 42vw var(--height2);
     mask-position: 42vw var(--height2);
@@ -310,7 +332,7 @@ p {
     mask-position: -250vmin -250vmin;
   }
   100% {
-    mask-size: 30 vmin;
+    mask-size: 30vmin;
     -webkit-mask-size: 30vmin;
     -webkit-mask-position: 42vw var(--height2);
     mask-position: 42vw var(--height2);
@@ -340,7 +362,7 @@ p {
     mask-position: 72vw var(--height3);
   }
   100% {
-    mask-size: 900 vmin;
+    mask-size: 900vmin;
     -webkit-mask-size: 900vmin;
     -webkit-mask-position: -250vmin -250vmin;
     mask-position: -250vmin -250vmin;
@@ -355,7 +377,7 @@ p {
     mask-position: -250vmin -250vmin;
   }
   100% {
-    mask-size: 30 vmin;
+    mask-size: 30vmin;
     -webkit-mask-size: 30vmin;
     -webkit-mask-position: 72vw var(--height3);
     mask-position: 72vw var(--height3);
@@ -370,7 +392,7 @@ p {
     mask-position: -250vmin -250vmin;
   }
   100% {
-    mask-size: 30 vmin;
+    mask-size: 30vmin;
     -webkit-mask-size: 30vmin;
     -webkit-mask-position: 72vw var(--height3);
     mask-position: 72vw var(--height3);
@@ -396,7 +418,7 @@ p {
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 
   :root {
     --opacity: 100%;
@@ -405,6 +427,21 @@ p {
     --width1: 10vh;
     --width2: 20vh;
     --width3: 70vh;
+  
+  }
+
+  #main{
+    position: absolute;
+  top: 0;
+  left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  
+    background-image: url(../../content/background/photo2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
   
   }
 
@@ -501,8 +538,8 @@ p {
     from {
       -webkit-mask-size: 30vmin;
       mask-size: 30vmin;
-      -webkit-mask-position: 12vw var(--height1);
-      mask-position: 12vw var(--height1);
+      -webkit-mask-position: var(--width1) 5vh;
+      mask-position: var(--width1) 5vh;
     }
     to {
       -webkit-mask-position: -250vmin -250vmin;
@@ -516,11 +553,11 @@ p {
     0% {
       -webkit-mask-size: 30vmin;
       mask-size: 30vmin;
-      -webkit-mask-position: 12vw var(--height1);
-      mask-position: 12vw var(--height1);
+      -webkit-mask-position: var(--width1) 5vh;
+      mask-position: var(--width1) 5vh;
     }
     100% {
-      mask-size: 900 vmin;
+      mask-size: 900vmin;
       -webkit-mask-size: 900vmin;
       -webkit-mask-position: -250vmin -250vmin;
       mask-position: -250vmin -250vmin;
@@ -535,10 +572,10 @@ p {
       mask-position: -250vmin -250vmin;
     }
     100% {
-      mask-size: 30 vmin;
+      mask-size: 30vmin;
       -webkit-mask-size: 30vmin;
-      -webkit-mask-position: 12vw var(--height1);
-      mask-position: 12vw var(--height1);
+      -webkit-mask-position: var(--width1) 5vh;
+      mask-position: var(--width1) 5vh;
     }
   }
     
@@ -550,10 +587,10 @@ p {
       mask-position: -250vmin -250vmin;
     }
     100% {
-      mask-size: 30 vmin;
+      mask-size: 30vmin;
       -webkit-mask-size: 30vmin;
-      -webkit-mask-position: 12vw var(--height1);
-      mask-position: 12vw var(--height1);
+      -webkit-mask-position: var(--width1) 5vh;
+      mask-position: var(--width1) 5vh;
     }
   }
     
@@ -562,8 +599,8 @@ p {
     from {
       -webkit-mask-size: 30vmin;
       mask-size: 30vmin;
-      -webkit-mask-position: 42vw var(--height2);
-      mask-position: 42vw var(--height2);
+      -webkit-mask-position: var(--width2) 38vh;
+      mask-position: var(--width2) 38vh;
     }
     to {
       -webkit-mask-position: -250vmin -250vmin;
@@ -577,11 +614,11 @@ p {
     0% {
       -webkit-mask-size: 30vmin;
       mask-size: 30vmin;
-      -webkit-mask-position: 42vw var(--height2);
-      mask-position: 42vw var(--height2);
+      -webkit-mask-position: var(--width2) 38vh;
+      mask-position: var(--width2) 38vh;
     }
     100% {
-      mask-size: 900 vmin;
+      mask-size: 900vmin;
       -webkit-mask-size: 900vmin;
       -webkit-mask-position: -250vmin -250vmin;
       mask-position: -250vmin -250vmin;
@@ -596,10 +633,10 @@ p {
       mask-position: -250vmin -250vmin;
     }
     100% {
-      mask-size: 30 vmin;
+      mask-size: 30vmin;
       -webkit-mask-size: 30vmin;
-      -webkit-mask-position: 42vw var(--height2);
-      mask-position: 42vw var(--height2);
+      -webkit-mask-position: var(--width2) 38vh;
+      mask-position: var(--width2) 38vh;
     }
   }
     
@@ -611,10 +648,10 @@ p {
       mask-position: -250vmin -250vmin;
     }
     100% {
-      mask-size: 30 vmin;
+      mask-size: 30vmin;
       -webkit-mask-size: 30vmin;
-      -webkit-mask-position: 42vw var(--height2);
-      mask-position: 42vw var(--height2);
+      -webkit-mask-position: var(--width2) 38vh;
+      mask-position: var(--width2) 38vh;
     }
   }
     
@@ -622,8 +659,8 @@ p {
     from {
       -webkit-mask-size: 30vmin;
       mask-size: 30vmin;
-      -webkit-mask-position: 72vw var(--height3);
-      mask-position: 72vw var(--height3);
+      -webkit-mask-position: var(--width3) 68vh;
+      mask-position: var(--width3) 68vh;
     }
     to {
       -webkit-mask-position: -250vmin -250vmin;
@@ -637,11 +674,11 @@ p {
     0% {
       -webkit-mask-size: 30vmin;
       mask-size: 30vmin;
-      -webkit-mask-position: 72vw var(--height3);
-      mask-position: 72vw var(--height3);
+      -webkit-mask-position: var(--width3) 68vh;
+      mask-position: var(--width3) 68vh;
     }
     100% {
-      mask-size: 900 vmin;
+      mask-size: 900vmin;
       -webkit-mask-size: 900vmin;
       -webkit-mask-position: -250vmin -250vmin;
       mask-position: -250vmin -250vmin;
@@ -656,10 +693,10 @@ p {
       mask-position: -250vmin -250vmin;
     }
     100% {
-      mask-size: 30 vmin;
+      mask-size: 30vmin;
       -webkit-mask-size: 30vmin;
-      -webkit-mask-position: 72vw var(--height3);
-      mask-position: 72vw var(--height3);
+      -webkit-mask-position: var(--width3) 68vh;
+      mask-position: var(--width3) 68vh;
     }
   }
     
@@ -671,13 +708,55 @@ p {
       mask-position: -250vmin -250vmin;
     }
     100% {
-      mask-size: 30 vmin;
+      mask-size: 30vmin;
       -webkit-mask-size: 30vmin;
-      -webkit-mask-position: 72vw var(--height3);
-      mask-position: 72vw var(--height3);
+      -webkit-mask-position: var(--width3) 68vh;
+      mask-position: var(--width3) 68vh;
     }
   }
 
 
 }
   
+
+
+
+
+
+
+@media (hover: none) and (pointer: coarse) {
+  
+  #inner-container1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    visibility: inherit; }
+  
+  
+  
+  
+  
+  #inner-container2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    visibility: inherit; }
+  
+  
+  
+  
+
+  #inner-container3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    visibility: inherit; }
+  
+  
+  
+  
+
+}
