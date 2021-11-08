@@ -90,12 +90,13 @@
       <div id="slider">
         <div id="slider_bg"></div>
         <span id="label" ><img src="../content/slider.svg" alt="slider" id="caddie"></span>
-        <span id="labelTip">Slide To Unlock</span>
+        <div id="labelTip">slide_to_shop</div>
     </div> 
 <script>
         $(function () {
             var slider = new SliderUnlock("#slider", {}, function () {
-				alert('SHOP');
+			
+        document.getElementById("slider").style.visibility = "hidden";
             });
 
             slider.init();

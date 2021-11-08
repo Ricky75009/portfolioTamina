@@ -86,7 +86,7 @@
         var me = this;
         me.swipestart = true;
         me.min = 0;
-        me.max = me.elm.width() - 20;
+        me.max = me.elm.width() ;
     };
 
     /**
