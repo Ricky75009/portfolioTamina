@@ -5,6 +5,11 @@
     <title>tamina_manganas</title>
     <!-- IMPORTING CSS FILE-->
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    
+    
+    
+    
+    
     <link
       rel="stylesheet"
       type="text/css"
@@ -18,19 +23,25 @@
       src="../static/opening_script.js"
     ></script>
     <script src="../libraries/p5.js"></script>
+
+   
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="../static/jquery.slideunlock.js"></script>
+    
+    
+    
+   
+   
   </head>
 
   <body>
+
+
     <!-- Mask and maskee. -->
 
     <div id="main">
-      
-      
-      
-      
-      
-      
-
       <img
         id="mask-svg1"
         class="background"
@@ -74,6 +85,35 @@
           <p>about_me</p>
         </div>
       </div>
+      
+  
+      <div id="slider">
+        <div id="slider_bg"></div>
+        <span id="label" ><img src="../content/slider.svg" alt="slider" id="caddie"></span>
+        <span id="labelTip">Slide To Unlock</span>
+    </div> 
+<script>
+        $(function () {
+            var slider = new SliderUnlock("#slider", {}, function () {
+				alert('SHOP');
+            });
+
+            slider.init();
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+      
+      
     </div>
   </body>
 </html>

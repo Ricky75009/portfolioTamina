@@ -760,3 +760,120 @@ p {
   
 
 }
+
+
+
+
+#slider {
+  margin: 0vh auto;
+  left: 30vw;
+  bottom: 5vh;
+  width: 300px;
+  height: 70px;
+  position: absolute;
+  border-radius:100px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+#slider_bg {
+  position: absolute;
+ left : 10px;
+  top: 0;
+
+  height: 100%;
+background-color: white;
+  z-index: 1;
+
+}
+
+#caddie{
+  width: 60px;
+  position: absolute;
+  left: 5px;
+  top: 5px ;
+    
+
+    
+
+
+}
+
+
+#label {
+  margin: 0 auto;
+  width: 46px;
+  position: absolute;
+  height: 38px;
+  z-index: 3;
+  cursor: move;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+#labelTip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 70px;
+margin-top: 28px;
+
+  font-size: 13px;
+  font-family: menlo;
+  color: #787878;
+
+  text-align: center;
+  z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
