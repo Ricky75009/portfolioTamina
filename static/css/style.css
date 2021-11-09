@@ -87,6 +87,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   -webkit-mask-image: url(../../content/shapes/shape1.svg);
   -webkit-mask-position: 12vw var(--height1);
   -webkit-mask-size: 20vh;
@@ -546,11 +547,12 @@ visibility: inherit;
   }
 
   p {
-    margin-top: 10vh;
+
     font-family: menlo;
     position: absolute;
-    top : 0vh;
+ 
     right:3vw;
+    bottom: 2vh;
     font-size: 2.5vmin;
     visibility: inherit;
   }
@@ -560,6 +562,7 @@ visibility: inherit;
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
     -webkit-mask-image: url(../../content/shapes/shape1.svg);
     -webkit-mask-position: var(--width1) 10vh;
     -webkit-mask-size: 20vh;
@@ -575,6 +578,7 @@ visibility: inherit;
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
     -webkit-mask-image: url(../../content/shapes/shape2.svg);
     -webkit-mask-position: var(--width2) 35vh;
     -webkit-mask-size: 20vh;
@@ -590,6 +594,7 @@ visibility: inherit;
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
     -webkit-mask-image: url(../../content/shapes/shape3.svg);
     -webkit-mask-position: var(--width3) 60vh;
     -webkit-mask-size: 20vh;
@@ -856,9 +861,9 @@ visibility: inherit;
     opacity: 100%;
     visibility: inherit;
   }
-
   #slider {
     display: inherit;
+    visibility: var(--visibility);
     margin: 0vh auto;
     left: 10vw;
     bottom: 5vh;
@@ -872,33 +877,31 @@ visibility: inherit;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    filter: drop-shadow(4px 4px 0 #000);
-    visibility: var(--visibility);
+    border: 2px solid #000;
+    filter: drop-shadow(8px 8px 0 #000);
+    overflow: visible;
   }
-
   #slider_bg {
     display: inherit;
+    visibility: inherit;
     position: absolute;
-    left: 10px;
+    left: 60px;
     top: 0;
-
     height: 100%;
     background-color: white;
     z-index: 1;
-    visibility: inherit;
   }
-
   #caddie {
     display: inherit;
+    visibility: inherit;
     width: 7vh;
     position: absolute;
     left: 1vw;
     top: 0.5vh;
-    visibility: inherit;
   }
-
   #label {
     display: inherit;
+    visibility: inherit;
     margin: 0 auto;
     width: 46px;
     position: absolute;
@@ -907,12 +910,12 @@ visibility: inherit;
     cursor: move;
     font-size: 16px;
     font-weight: 900;
-    visibility: inherit;
   }
-
   #labelTip {
     position: relative;
-    top: 3.25vh;
+    visibility: inherit;
+    top:0;
+    margin-top: 3.25vh;
     left: 0;
     width: 100%;
     height: 100%;
@@ -920,7 +923,11 @@ visibility: inherit;
     font-size: 1.5vh;
     font-family: menlo;
     color: grey;
-    visibility: inherit;
     z-index: 0;
   }
+
+
+
+
+
 }

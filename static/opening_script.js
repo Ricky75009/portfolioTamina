@@ -180,7 +180,7 @@ hovermasksvg2.onclick = function () {
       hover.classList.replace("close", "shop");
       r.style.setProperty("--visibility", "visible");
       masksvg1.style.visibility = "visible";
-      masksvg1.style.visibility = "visible";
+      masksvg3.style.visibility = "visible";
       if (window.matchMedia("(max-width: 1000px)").matches) {
         close_button.style.visibility = "hidden";
       }
@@ -252,13 +252,55 @@ close_button.onclick = function () {
   var container1 = document.getElementById("container1");
   var container2 = document.getElementById("container2");
   var container3 = document.getElementById("container3");
+  var masksvg1 = document.getElementById("mask-svg1");
+  var masksvg2 = document.getElementById("mask-svg2");
+  var masksvg3 = document.getElementById("mask-svg3");
   var hover = document.getElementById("hover");
+  var r = document.querySelector(":root");
+  var close_button = document.getElementById("close_button");
 
   if (container1.classList.contains("close")) {
-    alert("button");
+    if (masksvg1.classList.contains("animation1")) {
+      masksvg1.classList.replace("animation1", "animation1-reverse");
+      setTimeout(function () {
+        container1.classList.replace("close", "open");
+        hover.classList.replace("close", "shop");
+        r.style.setProperty("--visibility", "visible");
+        masksvg2.style.visibility = "visible";
+        masksvg3.style.visibility = "visible";
+        masksvg1.style.visibility = "visible";
+        if (window.matchMedia("(max-width: 1000px)").matches) {
+          close_button.style.visibility = "hidden";
+        }
+      }, 500);
+    }
   } else if (container2.classList.contains("close")) {
-    alert("2");
+    if (masksvg2.classList.contains("animation2")) {
+      masksvg2.classList.replace("animation2", "animation2-reverse");
+      setTimeout(function () {
+        container2.classList.replace("close", "open");
+        hover.classList.replace("close", "shop");
+        r.style.setProperty("--visibility", "visible");
+        masksvg1.style.visibility = "visible";
+        masksvg3.style.visibility = "visible";
+        if (window.matchMedia("(max-width: 1000px)").matches) {
+          close_button.style.visibility = "hidden";
+        }
+      }, 500);
+    }
   } else if (container3.classList.contains("close")) {
-    alert("3");
+    if (masksvg3.classList.contains("animation3")) {
+      masksvg3.classList.replace("animation3", "animation3-reverse");
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        close_button.style.visibility = "hidden";
+      }
+      setTimeout(function () {
+        container3.classList.replace("close", "open");
+        hover.classList.replace("close", "shop");
+        r.style.setProperty("--visibility", "visible");
+        masksvg1.style.visibility = "visible";
+        masksvg2.style.visibility = "visible";
+      }, 500);
+    }
   }
 };
