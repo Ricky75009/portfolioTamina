@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lan="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>tamina_manganas</title>
     <!-- IMPORTING CSS FILE-->
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
-    
-    
-    
-    
-    
+
     <link
       rel="stylesheet"
       type="text/css"
@@ -24,25 +20,21 @@
     ></script>
     <script src="../libraries/p5.js"></script>
 
-   
-   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
     <script src="../static/jquery.slideunlock.js"></script>
-    
-    
-    
-   
-   
   </head>
 
   <body>
-
-
     <!-- Mask and maskee. -->
 
     <div id="main">
-    <div id="close_button"><img data-content-type="close button" src="../content/close_button.svg"/></div>
+      <div id="close_button">
+        <img
+          data-content-type="close button"
+          src="../content/close_button.svg"
+        />
+      </div>
       <img
         id="mask-svg1"
         class="background"
@@ -86,36 +78,39 @@
           <p>about_me</p>
         </div>
       </div>
-      
-  
+
       <div id="slider">
         <div id="slider_bg"></div>
-        <span id="label" ><img src="../content/slider.svg" alt="slider" id="caddie"></span>
+        <span id="label"
+          ><img src="../content/slider.svg" alt="slider" id="caddie"
+        /></span>
         <div id="labelTip">slide_to_shop</div>
-    </div> 
-<script>
+      </div>
+      <script>
         $(function () {
-            var slider = new SliderUnlock("#slider", {}, function () {
-			
-        document.getElementById("slider").style.visibility = "hidden";
-            });
-
-            slider.init();
-        })
-    </script>
+          var slider = new SliderUnlock("#slider", {}, function () {
+            
+            var masksvg1 = document.getElementById("mask-svg1");
+            var hover = document.getElementById("hover");
+            var masksvg2 = document.getElementById("mask-svg2");
+            var masksvg3 = document.getElementById("mask-svg3");
 
 
+            document.getElementById("slider").style.visibility = "hidden";
+            r.style.setProperty("--visibility", "hidden");
+            masksvg2.style.visibility = "hidden";
+            masksvg1.style.visibility = "hidden";
+            masksvg3.style.visibility = "hidden";
+
+            alert("Eh oui Tam, bientôt tu vas pouvoir vendre tes photos !\nMais pour l'instant, on y est pas encore…\nT'as plus qu'as refresh la page " )
+          });
+          
 
 
 
-
-
-
-
-
-
-      
-      
+          slider.init();
+        });
+      </script>
     </div>
   </body>
 </html>

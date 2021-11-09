@@ -86,7 +86,7 @@
         var me = this;
         me.swipestart = true;
         me.min = 0;
-        me.max = me.elm.width() ;
+        me.max = me.elm.width() -5;
     };
 
     /**
@@ -155,7 +155,7 @@
     SliderUnlock.prototype.updateView = function () {
         var me = this;
 
-        me.sliderBg.css('width', me.index);
+        me.sliderBg.css('width', me.index -40);
         me.elm.find("#label").css("left", me.index + "px")
     };
 

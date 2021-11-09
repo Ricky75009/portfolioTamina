@@ -31,6 +31,78 @@ r.style.setProperty("--width1", width1);
 r.style.setProperty("--width2", width2);
 r.style.setProperty("--width3", width3);
 
+
+
+hover.onclick = function (event) {
+  var masksvg1 = document.getElementById("mask-svg1");
+  var hover = document.getElementById("hover");
+  var container1 = document.getElementById("container1");
+  var masksvg2 = document.getElementById("mask-svg2");
+  var container2 = document.getElementById("container2");
+  var container3 = document.getElementById("container3");
+  var masksvg3 = document.getElementById("mask-svg3");
+  var close_button = document.getElementById("close_button");
+
+  if (
+    masksvg1.classList.contains("animation1") &&
+    hover.classList.contains("close")
+  ) {
+    masksvg1.classList.replace("animation1", "animation1-reverse");
+    container1.classList.replace("close", "open");
+    setTimeout(function () {
+      masksvg2.style.visibility = "visible";
+      masksvg3.style.visibility = "visible";
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        close_button.style.visibility = "hidden";
+      }
+
+      r.style.setProperty("--visibility", "visible");
+      hover.classList.replace("close", "shop");
+    }, 500);
+  } else if (hover.classList.contains("shop")) {
+    alert("direction le shop");
+    r.style.setProperty("--visibility", "hidden");
+    masksvg2.style.visibility = "hidden";
+    masksvg1.style.visibility = "hidden";
+    masksvg3.style.visibility = "hidden";
+   
+   /* BACK TO PORTOFOLIO */
+   
+  } else if (
+    masksvg2.classList.contains("animation2") &&
+    hover.classList.contains("close")
+  ) {
+    masksvg2.classList.replace("animation2", "animation2-reverse");
+    container2.classList.replace("close", "open");
+    setTimeout(function () {
+      hover.classList.replace("close", "shop");
+      masksvg1.style.visibility = "visible";
+      masksvg3.style.visibility = "visible";
+      r.style.setProperty("--visibility", "visible");
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        close_button.style.visibility = "hidden";
+      }
+    }, 500);
+  } else if (
+    masksvg3.classList.contains("animation3") &&
+    hover.classList.contains("close")
+  ) {
+    masksvg3.classList.replace("animation3", "animation3-reverse");
+    container3.classList.replace("close", "open");
+    setTimeout(function () {
+      hover.classList.replace("close", "shop");
+      masksvg2.style.visibility = "visible";
+      masksvg3.style.visibility = "visible";
+      masksvg1.style.visibility = "visible";
+      r.style.setProperty("--visibility", "visible");
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        close_button.style.visibility = "hidden";
+      }
+    }, 500);
+  }
+};
+
+
 hovermasksvg1.onclick = function () {
   var masksvg1 = document.getElementById("mask-svg1");
   var masksvg2 = document.getElementById("mask-svg2");
@@ -85,74 +157,6 @@ hovermasksvg1.onclick = function () {
   }
 };
 
-hover.onclick = function (event) {
-  var masksvg1 = document.getElementById("mask-svg1");
-  var hover = document.getElementById("hover");
-  var container1 = document.getElementById("container1");
-  var masksvg2 = document.getElementById("mask-svg2");
-  var container2 = document.getElementById("container2");
-  var container3 = document.getElementById("container3");
-  var masksvg3 = document.getElementById("mask-svg3");
-  var close_button = document.getElementById("close_button");
-
-  if (
-    masksvg1.classList.contains("animation1") &&
-    hover.classList.contains("close")
-  ) {
-    masksvg1.classList.replace("animation1", "animation1-reverse");
-    container1.classList.replace("close", "open");
-    setTimeout(function () {
-      masksvg2.style.visibility = "visible";
-      masksvg3.style.visibility = "visible";
-      if (window.matchMedia("(max-width: 1000px)").matches) {
-        close_button.style.visibility = "hidden";
-      }
-
-      r.style.setProperty("--visibility", "visible");
-      hover.classList.replace("close", "shop");
-    }, 500);
-  } else if (hover.classList.contains("shop")) {
-    alert("direction le shop");
-    r.style.setProperty("--visibility", "hidden");
-    masksvg2.style.visibility = "hidden";
-    masksvg1.style.visibility = "hidden";
-    masksvg3.style.visibility = "hidden";
-    if (window.matchMedia("(max-width: 1000px)").matches) {
-      close_button.style.visibility = "hidden";
-    }
-  } else if (
-    masksvg2.classList.contains("animation2") &&
-    hover.classList.contains("close")
-  ) {
-    masksvg2.classList.replace("animation2", "animation2-reverse");
-    container2.classList.replace("close", "open");
-    setTimeout(function () {
-      hover.classList.replace("close", "shop");
-      masksvg1.style.visibility = "visible";
-      masksvg3.style.visibility = "visible";
-      r.style.setProperty("--visibility", "visible");
-      if (window.matchMedia("(max-width: 1000px)").matches) {
-        close_button.style.visibility = "hidden";
-      }
-    }, 500);
-  } else if (
-    masksvg3.classList.contains("animation3") &&
-    hover.classList.contains("close")
-  ) {
-    masksvg3.classList.replace("animation3", "animation3-reverse");
-    container3.classList.replace("close", "open");
-    setTimeout(function () {
-      hover.classList.replace("close", "shop");
-      masksvg2.style.visibility = "visible";
-      masksvg3.style.visibility = "visible";
-      masksvg1.style.visibility = "visible";
-      r.style.setProperty("--visibility", "visible");
-      if (window.matchMedia("(max-width: 1000px)").matches) {
-        close_button.style.visibility = "hidden";
-      }
-    }, 500);
-  }
-};
 
 hovermasksvg2.onclick = function () {
   var masksvg1 = document.getElementById("mask-svg1");
