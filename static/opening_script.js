@@ -1,24 +1,25 @@
 var numberOfCat = 3;
 
-
-
-
 var hover = document.getElementById("hover");
+var close_button = document.getElementById("close_button");
 
 var hovermasksvg1 = document.getElementById("hover-mask-svg1");
 var hovermasksvg2 = document.getElementById("hover-mask-svg2");
 var hovermasksvg3 = document.getElementById("hover-mask-svg3");
 
+var container1 = document.getElementById("container1");
+var container2 = document.getElementById("container2");
+var container3 = document.getElementById("container3");
+
 var r = document.querySelector(":root");
 
-var height1= (Math.floor(Math.random() * 66) + 5) + 'vh';
-var height2= (Math.floor(Math.random() * 66) + 5) + 'vh';
-var height3= (Math.floor(Math.random() * 56) + 10) + 'vh';
+var height1 = Math.floor(Math.random() * 66) + 5 + "vh";
+var height2 = Math.floor(Math.random() * 66) + 5 + "vh";
+var height3 = Math.floor(Math.random() * 56) + 10 + "vh";
 
-var width1= (Math.floor(Math.random() * 61) + 5) + 'vw';
-var width2= (Math.floor(Math.random() * 61) + 5) + 'vw';
-var width3= (Math.floor(Math.random() * 61) + 5) + 'vw';
-
+var width1 = Math.floor(Math.random() * 61) + 5 + "vw";
+var width2 = Math.floor(Math.random() * 61) + 5 + "vw";
+var width3 = Math.floor(Math.random() * 61) + 5 + "vw";
 
 r.style.setProperty("--visibility", "visible");
 
@@ -30,15 +31,13 @@ r.style.setProperty("--width1", width1);
 r.style.setProperty("--width2", width2);
 r.style.setProperty("--width3", width3);
 
-
-
-
 hovermasksvg1.onclick = function () {
   var masksvg1 = document.getElementById("mask-svg1");
   var masksvg2 = document.getElementById("mask-svg2");
   var masksvg3 = document.getElementById("mask-svg3");
   var hover = document.getElementById("hover");
   var container1 = document.getElementById("container1");
+  var close_button = document.getElementById("close_button");
 
   if (masksvg1.classList.contains("animation1-reverse")) {
     masksvg1.classList.replace("animation1-reverse", "animation1");
@@ -46,15 +45,14 @@ hovermasksvg1.onclick = function () {
     r.style.setProperty("--visibility", "hidden");
     masksvg2.style.visibility = "hidden";
     masksvg3.style.visibility = "hidden";
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      close_button.style.visibility = "visible";
+    }
 
     console.log("add animation class and change shop to close");
 
- 
- 
-
     hover.classList.replace("shop", "close");
     container1.classList.replace("open", "close");
-
   } else if (masksvg1.classList.contains("animation1")) {
     masksvg1.classList.replace("animation1", "animation1-reverse");
 
@@ -62,11 +60,13 @@ hovermasksvg1.onclick = function () {
       container1.classList.replace("close", "open");
       hover.classList.replace("close", "shop");
 
-      
       r.style.setProperty("--visibility", "visible");
       masksvg2.style.visibility = "visible";
       masksvg3.style.visibility = "visible";
       masksvg1.style.visibility = "visible";
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        close_button.style.visibility = "hidden";
+      }
     }, 500);
   } else {
     masksvg1.classList.add("animation1");
@@ -74,12 +74,14 @@ hovermasksvg1.onclick = function () {
     r.style.setProperty("--visibility", "hidden");
     masksvg2.style.visibility = "hidden";
     masksvg3.style.visibility = "hidden";
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      close_button.style.visibility = "visible";
+    }
 
     console.log("add animation class and change shop to close");
 
-      hover.classList.replace("shop", "close");
-      container1.classList.replace("open", "close");
-
+    hover.classList.replace("shop", "close");
+    container1.classList.replace("open", "close");
   }
 };
 
@@ -91,6 +93,7 @@ hover.onclick = function (event) {
   var container2 = document.getElementById("container2");
   var container3 = document.getElementById("container3");
   var masksvg3 = document.getElementById("mask-svg3");
+  var close_button = document.getElementById("close_button");
 
   if (
     masksvg1.classList.contains("animation1") &&
@@ -101,6 +104,9 @@ hover.onclick = function (event) {
     setTimeout(function () {
       masksvg2.style.visibility = "visible";
       masksvg3.style.visibility = "visible";
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        close_button.style.visibility = "hidden";
+      }
 
       r.style.setProperty("--visibility", "visible");
       hover.classList.replace("close", "shop");
@@ -111,6 +117,9 @@ hover.onclick = function (event) {
     masksvg2.style.visibility = "hidden";
     masksvg1.style.visibility = "hidden";
     masksvg3.style.visibility = "hidden";
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      close_button.style.visibility = "hidden";
+    }
   } else if (
     masksvg2.classList.contains("animation2") &&
     hover.classList.contains("close")
@@ -122,6 +131,9 @@ hover.onclick = function (event) {
       masksvg1.style.visibility = "visible";
       masksvg3.style.visibility = "visible";
       r.style.setProperty("--visibility", "visible");
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        close_button.style.visibility = "hidden";
+      }
     }, 500);
   } else if (
     masksvg3.classList.contains("animation3") &&
@@ -135,6 +147,9 @@ hover.onclick = function (event) {
       masksvg3.style.visibility = "visible";
       masksvg1.style.visibility = "visible";
       r.style.setProperty("--visibility", "visible");
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        close_button.style.visibility = "hidden";
+      }
     }, 500);
   }
 };
@@ -152,10 +167,12 @@ hovermasksvg2.onclick = function () {
     r.style.setProperty("--visibility", "hidden");
     masksvg1.style.visibility = "hidden";
     masksvg3.style.visibility = "hidden";
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      close_button.style.visibility = "visible";
+    }
 
-      hover.classList.replace("shop", "close");
-      container2.classList.replace("open", "close");
-
+    hover.classList.replace("shop", "close");
+    container2.classList.replace("open", "close");
   } else if (masksvg2.classList.contains("animation2")) {
     masksvg2.classList.replace("animation2", "animation2-reverse");
     setTimeout(function () {
@@ -164,6 +181,9 @@ hovermasksvg2.onclick = function () {
       r.style.setProperty("--visibility", "visible");
       masksvg1.style.visibility = "visible";
       masksvg1.style.visibility = "visible";
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        close_button.style.visibility = "hidden";
+      }
     }, 500);
   } else {
     masksvg2.classList.add("animation2");
@@ -171,11 +191,13 @@ hovermasksvg2.onclick = function () {
     r.style.setProperty("--visibility", "hidden");
     masksvg1.style.visibility = "hidden";
     masksvg3.style.visibility = "hidden";
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      close_button.style.visibility = "visible";
+    }
     console.log("add animation class and change shop to close");
 
-      hover.classList.replace("shop", "close");
-      container2.classList.replace("open", "close");
-
+    hover.classList.replace("shop", "close");
+    container2.classList.replace("open", "close");
   }
 };
 
@@ -192,12 +214,17 @@ hovermasksvg3.onclick = function () {
     r.style.setProperty("--visibility", "hidden");
     masksvg1.style.visibility = "hidden";
     masksvg2.style.visibility = "hidden";
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      close_button.style.visibility = "visible";
+    }
 
-      hover.classList.replace("shop", "close");
-      container3.classList.replace("open", "close");
-
+    hover.classList.replace("shop", "close");
+    container3.classList.replace("open", "close");
   } else if (masksvg3.classList.contains("animation3")) {
     masksvg3.classList.replace("animation3", "animation3-reverse");
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      close_button.style.visibility = "hidden";
+    }
     setTimeout(function () {
       container3.classList.replace("close", "open");
       hover.classList.replace("close", "shop");
@@ -211,12 +238,27 @@ hovermasksvg3.onclick = function () {
     r.style.setProperty("--visibility", "hidden");
     masksvg1.style.visibility = "hidden";
     masksvg2.style.visibility = "hidden";
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      close_button.style.visibility = "visible";
+    }
     console.log("add animation class and change shop to close");
 
-      hover.classList.replace("shop", "close");
-      container3.classList.replace("open", "close");
-
+    hover.classList.replace("shop", "close");
+    container3.classList.replace("open", "close");
   }
 };
 
+close_button.onclick = function () {
+  var container1 = document.getElementById("container1");
+  var container2 = document.getElementById("container2");
+  var container3 = document.getElementById("container3");
+  var hover = document.getElementById("hover");
 
+  if (container1.classList.contains("close")) {
+    alert("button");
+  } else if (container2.classList.contains("close")) {
+    alert("2");
+  } else if (container3.classList.contains("close")) {
+    alert("3");
+  }
+};
