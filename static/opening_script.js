@@ -60,11 +60,13 @@ hover.onclick = function (event) {
       hover.classList.replace("close", "shop");
     }, 500);
   } else if (hover.classList.contains("shop")) {
+    if (window.matchMedia("(min-width: 1000px)").matches) {
     alert("direction le shop");
     r.style.setProperty("--visibility", "hidden");
     masksvg2.style.visibility = "hidden";
     masksvg1.style.visibility = "hidden";
     masksvg3.style.visibility = "hidden";
+    }
    
    /* BACK TO PORTOFOLIO */
    
